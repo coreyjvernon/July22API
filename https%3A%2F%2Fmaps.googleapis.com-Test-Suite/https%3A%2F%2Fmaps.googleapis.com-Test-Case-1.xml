@@ -8,7 +8,7 @@
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="2f946b4e-0c8d-4de3-aadb-d067de0b0f4efileName">https%3A%2F%2Fmaps.googleapis.com-Test-Case-1</con:setting>
   </con:settings>
-  <con:testStep type="datasource" name="External" id="ef52cb6c-d4d3-45dd-b0df-50c4c264d56b">
+  <con:testStep type="datasource" name="External" id="ef52cb6c-d4d3-45dd-b0df-50c4c264d56b" disabled="true">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -54,7 +54,7 @@ From "JDBC_Sample"</query>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="Excel" id="52fe9c32-dfc4-4cda-9853-9f3d0cee9b77">
+  <con:testStep type="datasource" name="Excel" id="52fe9c32-dfc4-4cda-9853-9f3d0cee9b77" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -96,22 +96,13 @@ From "JDBC_Sample"</query>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="5fe79c32-428d-41ac-8b8a-359826d23da2" name="Match content of [long_name]">
-          <con:configuration>
-            <path>$['results'][0]['address_components'][2]['long_name']</path>
-            <content>${Excel#Expected State}</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="address" value="${Excel#City}"/>
+          <con:entry key="address" value="${Internal#city}"/>
           <con:entry key="key" value="AIzaSyCaDvq9XtyA6p5df4lsr7xkwSCydm5Xom0"/>
         </con:parameters>
         <con:parameterOrder>
@@ -161,7 +152,7 @@ From "JDBC_Sample"</query>
   <con:testStep type="datasourceloop" name="Data Source Loop" id="845b5c29-a7f4-486c-ae76-b69a2f8a2173">
     <con:settings/>
     <con:config>
-      <dataSourceStep>Excel</dataSourceStep>
+      <dataSourceStep>Internal</dataSourceStep>
       <targetStep>Request 1</targetStep>
       <discardResults>false</discardResults>
     </con:config>
