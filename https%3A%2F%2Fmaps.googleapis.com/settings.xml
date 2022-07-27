@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="abfd3482-4e07-4c77-974c-b8c3ebf31f86" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://maps.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="abfd3482-4e07-4c77-974c-b8c3ebf31f86fileName">https%3A%2F%2Fmaps.googleapis.com</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8089/</con:endpoint>
+    <con:endpoint>https://maps.googleapis.com</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="8275017b-0710-4ae6-a549-0e08a3b2f66a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7f61101c-0298-4d2d-8575-7afaf158acb9">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>
