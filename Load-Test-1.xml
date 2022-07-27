@@ -53,7 +53,9 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
       <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">095185fc-24ca-4099-a067-4b53c20f4b3f</con1:property>
     </con1:properties>
-    <con1:attributes/>
+    <con1:attributes>
+      <con1:property key="limits">Time=120;</con1:property>
+    </con1:attributes>
     <con1:addons/>
     <con1:scene label="New Scenario" id="035faadb-75f2-4cad-9420-4887a059139d">
       <con1:properties>
@@ -64,7 +66,9 @@
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
-      <con1:attributes/>
+      <con1:attributes>
+        <con1:property key="limits">Time=120;</con1:property>
+      </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="c808a2c5-a5fa-44ca-bcaf-6dd9ef9a3f90" category="Scheduler">
         <con1:properties>
